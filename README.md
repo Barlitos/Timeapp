@@ -1,7 +1,7 @@
 Timeapp
 # timeapp
 
-Do znudowania obrazu z repo nalezy wydac polecenie : 
+Do zbudowania obrazu z repo nalezy wydac polecenie : 
 docker build -t timeapp https://github.com/Barlitos/timeapp.git#main
 
 nastepnie : 
