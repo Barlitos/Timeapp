@@ -1,0 +1,31 @@
+<!Doctype html> 
+<html>
+<head> 
+	<title>Timeapp</title>
+<script type="text/javascript">
+function showtime(){
+	var now=new Date();
+	var offset= now.getTime() + (now.getTimezoneOffset() * 60000);
+	
+var clockSydney=new Date(offset + (3600000*11));
+var clockLublin=new Date(offset + 3600000);
+var clockNewYork=new Date(offset + (3600000*(-4)));	
+
+document.getElementById("Lublin").textContent ="Data: "+clockLublin.getDate()+"-"+clockLublin.getMonth()+" Godzina: "+clockLublin.getHours().toString()+":"+clockLublin.getMinutes();
+document.getElementById("NewYork").textContent ="Data: "+clockNewYork.getDate()+"-"+clockNewYork.getMonth()+" Godzina: "+clockNewYork.getHours().toString()+":"+clockNewYork.getMinutes();
+document.getElementById("Sydney").textContent ="Data: "+clockSydney.getDate()+"-"+clockSydney.getMonth()+" Godzina: "+clockSydney.getHours().toString()+":"+clockSydney.getMinutes();
+
+}
+
+showtime();
+</script>
+</head>
+<body onLoad="showtime()">
+ <div style="align-content:center;">
+	W Lublinie <div id="Lublin" style="align-content:center;"> </div> <br/>
+	W New York <div id="NewYork" style="align-content:center;"> </div> <br/>
+	W Sydney <div id="Sydney" style="align-content:center;"> </div> <br/>
+</div>
+</body>
+
+</html>
